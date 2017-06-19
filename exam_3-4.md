@@ -1,5 +1,6 @@
 
-## 1(1.1)
+\begin{problem}[1 (1.1)]
+\end{problem}
 $\forall a, b, c \in K$:
 
 a) $a0=0a=0$
@@ -21,7 +22,8 @@ c) $(a-b)c = ac-bc$ и $a(b-c)=ab-ac$
 	$a(b-c)+ac=a(b-c+c)=ab \Then a(b-c)=ab-ac$
 	\End{solution}
 
-## 2(1.2)
+\begin{problem}[2(1.2)]
+\end{problem}
 a) 
 	\Begin{solution}
 	$1_1 \expl{=}{\text{т. к.} 1_2 \text{--- единица}} 1_1 \cdot 1_2 \expl{=}{\text{т. к.} 1_1 \text{--- единица}} 1_2$
@@ -38,34 +40,40 @@ c)
 	Получается, они равны.
 	\End{solution}
 
-## 3
+\begin{problem}[3]
+\end{problem}
 
-## 4 (2.1(в))
+\begin{problem}[4 (2.1(в))]
+\end{problem}
 \Begin{solution}
 Пусть $a \in K$ обратим, $\exists a^{-1} \in K: aa^{-1} = 1$. Если $a$ --- делитель нуля, то $\exists 0 \ne b \in K: ab=0$. Тогда $a^{-1} a b = \begin{cases} a^{-1} \cdot 0 = 0 \\ 1 \cdot b = b \ne 0 \end{cases}$.
 Противоречие.
 \End{solution}
 
-## 5(2.1(д))
+\begin{problem}[5(2.1(д))]
+\end{problem}
 \Begin{solution}
 $ac=bc \Iff (a-b)c=0 \Then$ т. к. нет делителей нуля и $c \ne 0$, д. б. $a-b=0$, т. е. $a=b$.
 \End{solution}
 
-## 6(2.1(г))
+\begin{problem}[6(2.1(г))]
+\end{problem}
 \Begin{solution}
 Кольцо конечно $\Then$ его элементы можно занумеровать: $a_1, \dots, a_n$. Элементы $a\cdot a_1, \dots, a \cdot a_n$ должны быть все разные (иначе $\forall i \ne j, a \ne 0 \ a\cdot a_i = a \cdot a_j \Then \expl{a}{\ne 0} \expl{(a_i-a_j)}{\ne 0\text{, т. к. }i \ne j} = 0$ --- есть делители нуля).
 
 Тогда $\exists i: a \cdot a_i = 1$, т. к. $1 \in K$ (т. е. $a\cdot a_1, \dots, a \cdot a_n$ --- $n$ разных элементов кольца, а в кольце всего $n$ элементов; значит, какое-то $a_i$ должно быть $1$).
 \End{solution}
 
-## 7
+\begin{problem}[7]
+\end{problem}
 \Begin{solution}
 В области целостности нет делителей нуля, а если в конечном коммутативном кольце элемент --- не делитель нуля, то он обратим (№6). Т. е. все элементы обратимы.
 
 TODO: $\ge 2$ эл-тов.
 \End{solution}
 
-## 8
+\begin{problem}[8]
+\end{problem}
 \Begin{solution}
 Пусть $K$ --- кольцо, $a, b \in K^*$. Тогда $\exists a^{-1}, b^{-1} \in K^*$. Проверим групповые свойства.
 
@@ -76,11 +84,13 @@ TODO: $\ge 2$ эл-тов.
 Значит, $K^*$ --- группа по умножению.
 \End{solution}
 
-## 9
+\begin{problem}[9]
+\end{problem}
 \Begin{solution}
 \End{solution}
 
-## 10(2.2)
+\begin{problem}[10(2.2)]
+\end{problem}
 a)
 	\Begin{solution}
 	
@@ -117,16 +127,19 @@ b)
 	
 	\End{solution}
 	
-## 11
+\begin{problem}[11]
+\end{problem}
 \Begin{solution}
 \End{solution}
 
-## 12(2.9 $\When$)
+\begin{problem}[12(2.9 $\When$)]
+\end{problem}
 \Begin{solution}
 $b \in K^* \Then N(a) \le N(ab) \le N(abb^{-1}) = N(a)$
 \End{solution}
 
-## 13 (3.2)
+\begin{problem}[13 (3.2)]
+\end{problem}
 \Begin{solution}
 
 | a | b | $\mathbb{Z}[i], N = a^2+b^2$ | $\mathbb{Z}[\omega], N = a^2-ab+b^2$ |
@@ -148,7 +161,8 @@ $b \in K^* \Then N(a) \le N(ab) \le N(abb^{-1}) = N(a)$
 
 \End{solution}
 
-## 14 (3.9)
+\begin{problem}[14 (3.9)]
+\end{problem}
 \Begin{solution}
 
 a)	
@@ -185,16 +199,19 @@ c)
 
 \End{solution}
 
-## 15(3.11)
+\begin{problem}[15(3.11)]
+\end{problem}
 \Begin{solution}
 \End{solution}
 
-## 16(3.12)
+\begin{problem}[16(3.12)]
+\end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
-## 17(3.15)
+\begin{problem}[17(3.15)]
+\end{problem}
 \Begin{solution}
 
 * $\Then:$
@@ -210,7 +227,8 @@ TODO
 
 \End{solution}
 
-## 18(4.1)
+\begin{problem}[18(4.1)]
+\end{problem}
 
 a) 
 	\Begin{solution}
@@ -234,7 +252,8 @@ b)
 	\End{solution}
 
 
-## 19(4.2)
+\begin{problem}[19(4.2)]
+\end{problem}
 a)
 	\Begin{solution}
 	$(a+I)(b+I) = ab+aI+bI+II=ab+I=ba+I=ba+bI+aI+II=(b+I)(a+I)$
@@ -245,12 +264,14 @@ a)
 b)
 	\Begin{solution}
 	Проверим свойства гомоморфизма:
-		* $\phi(a)+\phi(b)=a+I+b+I= (a+b)+I=\phi(a+b)$
-		* $\phi(a)\phi(b) = (a+I)(b+I) = ab+aI+bI+II = ab+I = \phi(ab)$
-		* $\phi(1) = 1+I = 1_{\sfrac{K}{I}}$
+	* $\phi(a)+\phi(b)=a+I+b+I= (a+b)+I=\phi(a+b)$
+	* $\phi(a)\phi(b) = (a+I)(b+I) = ab+aI+bI+II = ab+I = \phi(ab)$
+	* $\phi(1) = 1+I = 1_{\sfrac{K}{I}}$
+	
 	\End{solution}
 
-## 20(4.5)
+\begin{problem}[20(4.5)]
+\end{problem}
 \Begin{solution}
 $(x)$ --- простой $\Bydef$ если $ab \in (x)$, то $\begin{sqcases} a \in (x) \\ b \in (x) \end{sqcases}$
 
@@ -259,7 +280,8 @@ $x$ --- простой $\Bydef$ если $ab \Divby x$, то $\begin{sqcases} a 
 Но $ab \in (x) \Iff ab \Divby x$ (ибо $(x) = \{ax \mid a \in K\}$ по определению, и $ab \in K$).
 \End{solution}
 
-## 21(4.6)
+\begin{problem}[21(4.6)]
+\end{problem}
 \Begin{solution}
 Знаем (№17): $\sfrac{K}{I}$ --- поле $\Iff$ в $\sfrac{K}{I}$ нет нетривиальных идеалов.
 
@@ -271,17 +293,19 @@ $x$ --- простой $\Bydef$ если $ab \Divby x$, то $\begin{sqcases} a 
 	
 \End{solution}
 
-## 22(4.7)
+\begin{problem}[22(4.7)]
+\end{problem}
 \Begin{solution}
 
 * $\Then:$
 	Пусть I --- простой, но $\sfrac{K}{I}$ --- не область целостности. Тогда $\exists a, b \in K: (a+I)(b+I) = ab+I = 0+I = 0_{\sfrac{K}{I}}$. Но тогда должно быть $ab \in I$, т. е. идеал не простой. Противоречие.
 * $\When:$
-	Пусть I непростой. Тогда $\exists a, b: a, b in I$, но $ab \not\in I$. Рассмотрим $0 \ne (a+I)(b+I) = ab + I \expl{=}{ab \in I} I =  0_{\sfrac{K}{I}}$.
+	Пусть I непростой. Тогда $\exists a, b: a, b \in I$, но $ab \not\in I$. Рассмотрим $0 \ne (a+I)(b+I) = ab + I \expl{=}{ab \in I} I =  0_{\sfrac{K}{I}}$.
 
 \End{solution}
 
-## 23
+\begin{problem}[23]
+\end{problem}
 \Begin{solution}
 
 a) $a \cdot bc = b \cdot ac$ --- из коммутативности.
@@ -297,33 +321,39 @@ TODO
 
 \End{solution}
 
-## 24(6.1)
+\begin{problem}[24(6.1)]
+\end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
-## 25(6.2?)
+\begin{problem}[25(6.2?)]
+\end{problem}
 \Begin{solution}
 По критерию Эйзенштейна: $1 \not\Divby p, -p \Divby p, -p \not\Divby p^2$, где p --- простое.
 \End{solution}
 
-## 26(6.3)
+\begin{problem}[26(6.3)]
+\end{problem}
 \Begin{solution}
 Если k непростое, $k=m\cdot n$, то $m\cdot n = 0$, т. е. есть делители нуля --- противоречие с тем, что у нас поле.
 \End{solution}
 
-## 27(6.4)
+\begin{problem}[27(6.4)]
+\end{problem}
 \Begin{solution}
 \End{solution}
 
-## 28(6.5)
+\begin{problem}[28(6.5)]
+\end{problem}
 \Begin{solution}
 Пусть F конечно, а $\Char F = 0$. Тогда $\ubrace{1+\dots+1}{k}$ для любого k будет давать элемент поля, не совпадающий с предыдущими (иначе $\Char$ была бы конечна).
 
 Получается, что F бесконечно. Противоречие.
 \End{solution}
 
-## 29(№6.7)
+\begin{problem}[29(№6.7)]
+\end{problem}
 $\phi: F \to L$ -- инъекция $\Iff \Ker \phi = \{0\}$.
 \Begin{solution}
 
@@ -347,13 +377,15 @@ $\forall a \in F \forall x \in \Ker \phi \ \phi(ax)=\phi(a)\phi(x)=\phi(a) \cdot
 В поле F идеал $I=\begin{cases} \{0\} \\ F \end{cases}$, т. е. $\Ker \phi = \begin{cases} \{0\}\\F --- \text{но в этом случае гомоморфизм тривиален, но у нас нетривиальный по условию} \end{cases}$
 
 
-## 30(№6.8)
+\begin{problem}[30(№6.8)]
+\end{problem}
 \Begin{solution}
 Проверка свойств. Свойства линейного пространства следуют из аксиом поля.
 TODO: скопировать из вики свойства.
 \End{solution}
 
-## 31(Lecture_all.pdf утв. 6.2(2))
+\begin{problem}[31(Lecture\_all.pdf утв. 6.2(2))]
+\end{problem}
 \Begin{solution}
 
 $\tilde{m} := \ubrace{1+\dots+1}{m \text{ штук}}$ 
@@ -368,44 +400,52 @@ $\tilde{n} := \ubrace{1+\dots+1}{n \text{ штук}}$
 TODO: почему так?
 \End{solution}
 
-## 32 (Lecture_all.pdf утв. 6.5(2))
+\begin{problem}[32 (Lecture\_all.pdf утв. 6.5(2))]
+\end{problem}
 \Begin{solution}
 Обозначим смежный класс многочлена $g(x) \in F$ как $\overline{g}(x) \in K$. Тогда имеем: $\overline{x} \in K$ --- корень многочлена $f(x)$, т. к. $f(\overline{x}) = \overline{f}(\overline{x}) = 0$.
 \End{solution}
 
-## 33 
+\begin{problem}[33]
+\end{problem}
 \Begin{solution}
 Обозначим смежный класс многочлена $g(x) \in F$ как $\overline{g}(x) \in K$. Рассмотрим $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$. Пусть они ЛЗ, т. е. $\exists \lambda_0, \lambda_1, \dots, \lambda_{n-1} \in F: \lambda_0\cdot\ol{1}+\lambda_1\cdot\ol{x}+\dots+\lambda_{n-1}\cdot\ol{x}^{n-1} = 0$. Тогда $g(x) = \lambda_0+\lambda_1x+\dots+\lambda_{n-1}x^{n-1} \in (f(x))$, а по неприводимости $f(x)$ имеем $g(x) = 0$, т. е. $\lambda_0 = \lambda_1 = \dots = \lambda_{n-1} = 0$, и данная ЛК тривиальна. Поэтому $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$ ЛНЗ.
 
-$\forall$ многочлена $h(x) \in F[x] \ \ol{h}(x)$ --- образ при факторизации по идеалу $(f(x)) --- совпадает с $\ol{r}(x)$, где $r(x)$ --- остаток от деления $h(x)$ на $f(x)$. Поэтому $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$ образуют базис K как линейного пространства над F, т. е. $[K:F] = n$.
+$\forall$ многочлена $h(x) \in F[x] \ \ol{h}(x)$ --- образ при факторизации по идеалу $(f(x))$ --- совпадает с $\ol{r}(x)$, где $r(x)$ --- остаток от деления $h(x)$ на $f(x)$. Поэтому $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$ образуют базис K как линейного пространства над F, т. е. $[K:F] = n$.
 \End{solution}
 
-## 36(9.1)
+\begin{problem}[36(9.1)]
+\end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
-## 37
+\begin{problem}[37]
+\end{problem}
 \Begin{solution}
 
 \End{solution}
 
-## 38(9.6)
+\begin{problem}[38(9.6)]
+\end{problem}
 \Begin{solution}
 
 \End{solution}
 
-## 39
+\begin{problem}[39]
+\end{problem}
 \Begin{solution}
 
 \End{solution}
 
-## 40 (10.2)
+\begin{problem}[40 (10.2)]
+\end{problem}
 \Begin{solution}
 
 \End{solution}
 
-## 41 (10.4)
+\begin{problem}[41 (10.4)]
+\end{problem}
 \Begin{solution}
 
 \End{solution}

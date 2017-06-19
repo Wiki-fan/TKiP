@@ -232,8 +232,12 @@ $endif$
 
 \DeclareUnicodeCharacter{25B6}{\chi}
 % Styles
-\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={},postheadspace=1em,qed=$$\blacktriangleleft$$]{mysolutionstyle}
-\declaretheorem[style=mysolutionstyle,numbered=no,name=$$\blacktriangleright$$]{solution}
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={},postheadspace={0px}]{problemstyle}
+\declaretheorem[style=problemstyle,numbered=no,name=№]{problem}
+
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={ },postheadspace={0px},qed=$$\blacktriangleleft$$,
+headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]{solutionstyle}
+\declaretheorem[style=solutionstyle,numbered=no,name=$$\blacktriangleright$$]{solution}
 
 % Explain
 \newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
@@ -246,7 +250,10 @@ $endif$
 \newcommand{\Iff}{\Leftrightarrow}
 \newcommand{\When}{\Leftarrow}
 \newcommand{\Bydef}{\rightleftharpoons}
-\newcommand{\Divby}{\raisebox{-2pt}{\vdots}}
+%\newcommand{\Divby}{\raisebox{-2pt}{\vdots}}
+\DeclareRobustCommand{\Divby}{%
+  \mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
+}
 
 % Mathbbs
 \newcommand{\Z}{\mathbb{Z}}
@@ -254,7 +261,6 @@ $endif$
 \newcommand{\R}{\mathbb{R}}
 \renewcommand{\C}{\mathbb{C}}
 
-% Characteristic
 \DeclareMathOperator{\Char}{char}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Quot}{Quot}

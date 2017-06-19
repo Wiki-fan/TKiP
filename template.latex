@@ -239,6 +239,9 @@ $endif$
 headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]{solutionstyle}
 \declaretheorem[style=solutionstyle,numbered=no,name=$$\blacktriangleright$$]{solution}
 
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={.},postheadspace={4px}]{definitionstyle}
+\declaretheorem[style=definitionstyle,numbered=yes,name=Опр]{defn}
+
 % Explain
 \newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
 \newcommand{\explup}[2]{\overset{\mathclap{\underset{\downarrow}{#2}}}{#1}}
@@ -264,6 +267,8 @@ headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]
 \DeclareMathOperator{\Char}{char}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
 
 \renewcommand{\~}{\sim}
 \renewcommand{\phi}{\varphi}

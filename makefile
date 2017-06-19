@@ -5,4 +5,4 @@
 	pdflatex --halt-on-error $@.tex 
 
 clean:
-	rm *.aux *.log *.out *.pdf *tex
+	rm *.aux *.log *.out *.pdf *.tex

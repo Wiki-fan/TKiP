@@ -8,10 +8,6 @@
 
 \usepackage{xfrac}
 
-\usepackage{pifont}
-
-\usepackage{xspace}
-
 % Explain
 \newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
 \newcommand{\explup}[2]{\overset{\mathclap{\underset{\downarrow}{#2}}}{#1}}
@@ -44,12 +40,15 @@
 \renewcommand{\~}{\sim}
 \renewcommand{\phi}{\varphi}
 \newcommand{\ol}{\overline}
+
+\usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
 \newcommand{\y}{\cmark}
 \newcommand{\x}{\xmark}
 
 % Кавычки
+\usepackage{xspace}
 \newcommand{\lgq}{\guillemotleft\nobreak\ignorespaces}
 \newcommand{\rgq}{\guillemotright\xspace}
 
@@ -101,3 +100,7 @@ headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]
 
 \declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={.},postheadspace={4px}]{definitionstyle}
 \declaretheorem[style=definitionstyle,numbered=yes,name=Опр.]{defn}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}

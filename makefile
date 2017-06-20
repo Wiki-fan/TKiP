@@ -5,5 +5,5 @@ all: exam_2 exam_3-4 exam_5-6 exam_9-10
 	pdflatex --halt-on-error $@.tex 
 
 clean:
-	rm *.aux *.log *.out *.pdf exam_*.tex
+	rm *.aux *.log *.out exam_*.tex
 

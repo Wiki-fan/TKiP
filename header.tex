@@ -1,3 +1,5 @@
+\usepackage[a4paper,left=20mm,right=10mm,top=20mm,bottom=20mm]{geometry}
+
 \usepackage{amsgen, amsmath, amstext, amsbsy, amsopn, amsfonts, amsthm, thmtools,  amssymb, amscd, mathtext, mathtools}
 \usepackage{versions}
 
@@ -7,6 +9,8 @@
 \usepackage{xfrac}
 
 \usepackage{pifont}
+
+\usepackage{xspace}
 
 % Explain
 \newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
@@ -31,6 +35,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 
 % Mathbbs
+\newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
@@ -43,6 +48,10 @@
 \newcommand{\xmark}{\ding{55}}
 \newcommand{\y}{\cmark}
 \newcommand{\x}{\xmark}
+
+% Кавычки
+\newcommand{\lgq}{\guillemotleft\nobreak\ignorespaces}
+\newcommand{\rgq}{\guillemotright\xspace}
 
 % Consider changing to sfrac
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}

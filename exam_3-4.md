@@ -481,6 +481,8 @@ TODO
 \begin{problem}[29(№6.7)]
 Нетривиальный гомоморфизм полей $\varphi: F \to L$ является инъекцией.
 \end{problem}
+\Begin{solution}
+
 $\phi: F \to L$ -- инъекция $\Iff \Ker \phi = \{0\}$.
 \Begin{solution}
 
@@ -503,6 +505,7 @@ $\forall a \in F \forall x \in \Ker \phi \ \phi(ax)=\phi(a)\phi(x)=\phi(a) \cdot
 
 В поле F идеал $I=\begin{cases} \{0\} \\ F \end{cases}$, т. е. $\Ker \phi = \begin{cases} \{0\} \\ F --- \text{но в этом случае гомоморфизм тривиален, но у нас нетривиальный по условию} \end{cases}$
 
+\End{solution}
 
 \begin{problem}[30(№6.8)]
 $K$ образует линейное пространство над $F$.
@@ -561,7 +564,7 @@ $(f+g)'= n(a_n+b_n)x^n+\dots+(a_2+b_2)x+(a_1+b_1) = (na_nx^n+a_2x+a_1)+(nb_nx^n+
 Многочлен $f$ не имеет кратных корней тогда и только тогда, когда $(f,f')=1$.
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
 \begin{problem}[38(9.6)]
@@ -577,40 +580,49 @@ f) $z\cdot w$, $\frac{z}{w}$ (при $w\neq 0$)?
 g) $\sqrt{z}$?
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
 \begin{problem}[39 (9.12а)]
 Докажите невозможность \textbf{удвоения куба}, то есть построение куба объёма $2$, имея куб объёма $1$ с помощью циркуля и линейки.
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
 \begin{problem}[40 (10.2)]
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
-\begin{problem}[41 (10.4)]
+\begin{problem}[41 (10.4) (Lectures\_all.pdf задача 9.1, утв. 9.1)]
+Пусть $F \subset K$ — расширение полей. Множество автоморфизмов $K$, оставляющих $F$ на месте, является группой и называется группой автоморфизмов и обозначается $\Aut_F(K) = \Aut([K : F])$.
+a) $\Aut_F(K)$ — группа.
+b) Пусть $H \subset \Aut_F(K)$ --- подгруппа. Тогда $K^H = \{x \in K \mid \forall h \in H \Have h(x) = x\}$ является полем, причём $K \supset K^H \supset F$.
 \end{problem}
 \Begin{solution}
+b) Действительно, если $a, b \in K^H, h \in H$ то $h(a + b) = h(a) + h(b) = a + b$, и поэтому $a + b \in K^H$. Аналогично, $ab \in K^H$. С другой стороны, $h \in H \subset G$, и поэтому $h(x) = x\ \forall x \in F$. Значит, $F \subset K^H$.
 
 \End{solution}
 
 \begin{problem}[42 (10.5)]
+Опишите группы автоморфизмов $\Q(\sqrt[3]{2})$.
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
-\begin{problem}[43 (11.1)]
+\begin{problem}[43 (11.1) (Lectures\_all.pdf теор. 11.1)]
 a) Конечное поле характеристики $p$ состоит из $p^n$ элементов. 
 b) Поле $F$ является полем разложения многочлена $x^{p^n}-x$. 
 c) Cуществует единственное поле из $p^n$ элементов.
 \end{problem}
+
 \Begin{solution}
+a) Так как $K$ — конечное расширение поля $\Zp$, то $K$ является n-мерным линейным пространством над $\Zp$, и поэтому состоит из $p^n$ элементов.
+b) Пусть $\alpha \in K, \alpha \ne 0$. Тогда $\alpha^{p^n-1} = 1$. Следовательно, $\alpha$ является корнем многочлена $f$. Степень многочлена $f$ равна $p^n$, все элементы K являются его корнями. Ясно, что $K$ --- минимальное поле, в котором $f$ раскладывается на линейные множители. Следовательно, K --- его поле разложения.
+c) Поле разложение многочлена $f$ единственно с точностью до изоморфизма.
 
 \End{solution}
 
@@ -618,12 +630,12 @@ c) Cуществует единственное поле из $p^n$ элемен
 Найдите все неприводимые многочлены (со стар. коэффициент $1$) степени $2$, $3$ над полем a) $F_2$, b) $F_3$.
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}
 
 \begin{problem}[45 (11.3)]
 Постройте поле из a) $4$; b) $8$; c) $9$ элементов.
 \end{problem}
 \Begin{solution}
-
+TODO
 \End{solution}

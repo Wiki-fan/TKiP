@@ -83,7 +83,7 @@ $\forall u \in \C$ определим $\Z[u] = \bigcup\limits_{n=0}^\infty \{a_o
 1. $(I,+) \subset (K,+)$ --- подгруппа по сложению.
 2. Для любых элементов $a\in K$ и $x \in I$ верно, что $ax \in I$.
 
-Таким образом, подкольцо $I \subset K$ называется идеалом, если $\forall a\in K, x \in I \ xy \in I$.
+Таким образом, подкольцо $I \subset K$ называется идеалом, если $\forall a\in K, x \in I \Have xy \in I$.
 \End{defn}
 
 \Begin{defn}

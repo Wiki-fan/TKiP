@@ -1,0 +1,87 @@
+\usepackage{amsgen, amsmath, amstext, amsbsy, amsopn, amsfonts, amsthm, thmtools,  amssymb, amscd, mathtext, mathtools}
+\usepackage{versions}
+
+\usepackage{float}
+\restylefloat{table}
+
+\usepackage{xfrac}
+
+% Explain
+\newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
+\newcommand{\explup}[2]{\overset{\mathclap{\underset{\downarrow}{#2}}}{#1}}
+\newcommand{\obrace}[2]{\overbrace{#1}^{#2}}
+\newcommand{\ubrace}[2]{\underbrace{#1}_{#2}}
+
+% Arrows
+\newcommand{\Then}{\Rightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\When}{\Leftarrow}
+\newcommand{\Bydef}{\rightleftharpoons}
+%\newcommand{\Divby}{\raisebox{-2pt}{\vdots}}
+\DeclareRobustCommand{\Divby}{%
+  \mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
+}
+
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+
+% Mathbbs
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\C}{\mathbb{C}}
+
+\renewcommand{\~}{\sim}
+\renewcommand{\phi}{\varphi}
+\newcommand{\ol}{\overline}
+
+% Consider changing to sfrac
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\makeatletter
+\newenvironment{nocases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@nocases{%
+  \let\@ifnextchar\new@ifnextchar
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\newcommand{\nopandoc}[1]{#1} % hide LaTeX code from pandoc
+\nopandoc{
+	\let\Begin\begin
+	\let\End\end
+}
+
+
+% Styles
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={},postheadspace={0px}]{problemstyle}
+\declaretheorem[style=problemstyle,numbered=no,name=№]{problem}
+
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={ },postheadspace={0px},qed=$\blacktriangleleft$,
+headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]{solutionstyle}
+\declaretheorem[style=solutionstyle,numbered=no,name=$\blacktriangleright$]{solution}
+
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={.},postheadspace={4px}]{definitionstyle}
+\declaretheorem[style=definitionstyle,numbered=yes,name=Опр]{defn}

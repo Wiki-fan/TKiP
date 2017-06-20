@@ -564,7 +564,11 @@ $(f+g)'= n(a_n+b_n)x^n+\dots+(a_2+b_2)x+(a_1+b_1) = (na_nx^n+a_2x+a_1)+(nb_nx^n+
 Многочлен $f$ не имеет кратных корней тогда и только тогда, когда $(f,f')=1$.
 \end{problem}
 \Begin{solution}
-TODO
+Пусть $f(x) = (x-a)^mf_1(x), f_1(x) \not\Divby (x-a), m \ge 2$. Тогда $f'(x)=m(x-a)^{m-1}f_1(x)+(x-a)^mf'_1(x)$.
+
+* Если $m > 1$, то $f'(a) = 0$. 
+* Если $m=1$, то $f'(x)=(x-a)f'_1(x)+f_1(x) \Then f'(a)=f_1(a) \ne 0 \Then f(x)$ имеет кратные корни $\Iff$ эти корни являются корнями $f'(x)$.
+
 \End{solution}
 
 \begin{problem}[38(9.6)]

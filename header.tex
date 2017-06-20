@@ -6,6 +6,8 @@
 
 \usepackage{xfrac}
 
+\usepackage{pifont}
+
 % Explain
 \newcommand{\expl}[2]{\underset{\mathclap{\overset{\uparrow}{#2}}}{#1}}
 \newcommand{\explup}[2]{\overset{\mathclap{\underset{\downarrow}{#2}}}{#1}}
@@ -37,6 +39,10 @@
 \renewcommand{\~}{\sim}
 \renewcommand{\phi}{\varphi}
 \newcommand{\ol}{\overline}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\y}{\cmark}
+\newcommand{\x}{\xmark}
 
 % Consider changing to sfrac
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
@@ -76,7 +82,8 @@
 
 
 % Styles
-\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={},postheadspace={0px}]{problemstyle}
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={},%
+postheadspace={5px},headformat={\makebox[0pt][r]{\NAME\ \NUMBER\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE}]{problemstyle}
 \declaretheorem[style=problemstyle,numbered=no,name=№]{problem}
 
 \declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={ },postheadspace={0px},qed=$\blacktriangleleft$,
@@ -84,4 +91,4 @@ headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]
 \declaretheorem[style=solutionstyle,numbered=no,name=$\blacktriangleright$]{solution}
 
 \declaretheoremstyle[notefont=\bfseries,notebraces={}{},headpunct={.},postheadspace={4px}]{definitionstyle}
-\declaretheorem[style=definitionstyle,numbered=yes,name=Опр]{defn}
+\declaretheorem[style=definitionstyle,numbered=yes,name=Опр.]{defn}

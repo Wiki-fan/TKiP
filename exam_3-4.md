@@ -1,5 +1,5 @@
-
 \begin{problem}[1 (1.1)]
+Для любых $a,b,c \in K$ выполнены равенства
 \end{problem}
 $\forall a, b, c \in K$:
 
@@ -24,15 +24,15 @@ c) $(a-b)c = ac-bc$ и $a(b-c)=ab-ac$
 
 \begin{problem}[2(1.2)]
 \end{problem}
-a) 
+a) В кольце не может быть двух различных единиц.
 	\Begin{solution}
-	$1_1 \expl{=}{\text{т. к.} 1_2 \text{--- единица}} 1_1 \cdot 1_2 \expl{=}{\text{т. к.} 1_1 \text{--- единица}} 1_2$
+	$1_1 \ubrace{=}{\text{т. к.} 1_2 \text{--- единица}} 1_1 \cdot 1_2 \ubrace{=}{\text{т. к.} 1_1 \text{--- единица}} 1_2$
 	\End{solution}
-b)
+b) Пусть кольцо с единицей содержит не меньше двух элементов. Тогда $1 \neq 0$.
 	\Begin{solution}
-	$\forall a \in K\ a \expl{=}{\text{св-во 1}} a \cdot e \expl{=}{\text{св-во 0}} 0$
+	$\forall a \in K\ a \ubrace{=}{\text{св-во 1}} a \cdot e \ubrace{=}{\text{св-во 0}} 0$
 	\End{solution}
-c) 
+c) Может ли элемент ассоциативного кольца иметь более одного обратного элемента?
 	\Begin{solution}
 	Пусть $a_1 \ne a_2$ --- обратные к $a$ элементы. Тогда 
 	$a_1 a a_2 = \begin{cases} a_1 \cdot 1 = a_1 \\ 1 \cdot a_2 = a_2 \end{cases}$
@@ -40,10 +40,12 @@ c)
 	Получается, они равны.
 	\End{solution}
 
-\begin{problem}[3]
+\begin{problem}[3(1.3, 2.4)]
+Уметь отвечать на вопросы: является ли данное кольцо K коммутативным? ассоциативным?кольцом с единицей? область целостности? поле? евклидово кольцо? Какие в K есть обратимые элементы? неразложимые? простые?
 \end{problem}
 
 \begin{problem}[4 (2.1(в))]
+Обратимый элемент кольца не может быть делителем нуля.
 \end{problem}
 \Begin{solution}
 Пусть $a \in K$ обратим, $\exists a^{-1} \in K: aa^{-1} = 1$. Если $a$ --- делитель нуля, то $\exists 0 \ne b \in K: ab=0$. Тогда $a^{-1} a b = \begin{cases} a^{-1} \cdot 0 = 0 \\ 1 \cdot b = b \ne 0 \end{cases}$.
@@ -51,20 +53,23 @@ c)
 \End{solution}
 
 \begin{problem}[5(2.1(д))]
+Если $K$ --- область целостности, то возможно сокращение: если $ac=bc$ и $c \neq 0$, то $a=b$.
 \end{problem}
 \Begin{solution}
 $ac=bc \Iff (a-b)c=0 \Then$ т. к. нет делителей нуля и $c \ne 0$, д. б. $a-b=0$, т. е. $a=b$.
 \End{solution}
 
 \begin{problem}[6(2.1(г))]
+В конечном коммутативном кольце если ненулевой элемент не является делителем нуля, то он обратим.
 \end{problem}
 \Begin{solution}
-Кольцо конечно $\Then$ его элементы можно занумеровать: $a_1, \dots, a_n$. Элементы $a\cdot a_1, \dots, a \cdot a_n$ должны быть все разные (иначе $\forall i \ne j, a \ne 0 \ a\cdot a_i = a \cdot a_j \Then \expl{a}{\ne 0} \expl{(a_i-a_j)}{\ne 0\text{, т. к. }i \ne j} = 0$ --- есть делители нуля).
+Кольцо конечно $\Then$ его элементы можно занумеровать: $a_1, \dots, a_n$. Элементы $a\cdot a_1, \dots, a \cdot a_n$ должны быть все разные (иначе $\forall i \ne j, a \ne 0 \ a\cdot a_i = a \cdot a_j \Then \ubrace{a}{\ne 0} \ubrace{(a_i-a_j)}{\ne 0\text{, т. к. }i \ne j} = 0$ --- есть делители нуля).
 
 Тогда $\exists i: a \cdot a_i = 1$, т. к. $1 \in K$ (т. е. $a\cdot a_1, \dots, a \cdot a_n$ --- $n$ разных элементов кольца, а в кольце всего $n$ элементов; значит, какое-то $a_i$ должно быть $1$).
 \End{solution}
 
 \begin{problem}[7]
+Конечная область целостности --- поле.
 \end{problem}
 \Begin{solution}
 В области целостности нет делителей нуля, а если в конечном коммутативном кольце элемент --- не делитель нуля, то он обратим (№6). Т. е. все элементы обратимы.
@@ -73,6 +78,7 @@ TODO: $\ge 2$ эл-тов.
 \End{solution}
 
 \begin{problem}[8]
+Множество $K^*$ обратимых элементов кольца K является группой по умножению. Она называется \textbf{мультипликативной группой}, или \textbf{группой обратимых элементов} кольца $K$.
 \end{problem}
 \Begin{solution}
 Пусть $K$ --- кольцо, $a, b \in K^*$. Тогда $\exists a^{-1}, b^{-1} \in K^*$. Проверим групповые свойства.
@@ -84,14 +90,19 @@ TODO: $\ge 2$ эл-тов.
 Значит, $K^*$ --- группа по умножению.
 \End{solution}
 
-\begin{problem}[9]
+\begin{problem}[9(1.5-1.7)]
+Базовые знания про комплексные числа: сложение, умножение, модуль, аргумент, извлечение корней n-ой степени.
 \end{problem}
 \Begin{solution}
 \End{solution}
 
 \begin{problem}[10(2.2)]
 \end{problem}
-a)
+a) Следующие условия эквивалентны:
+	(1) $x \sim y$;
+	(2) $x \mid y$ и $y \mid x$;
+	(3) множество делителей $x$ и множество делителей $y$ равны.
+	
 	\Begin{solution}
 	
 	* $(1) \Then (2):$
@@ -111,7 +122,7 @@ a)
 	
 	\End{solution}
 
-b)
+b) Отношение $\sim$ является отношением эквивалентности.
 	\Begin{solution}
 	
 	1. $x\~x$, т. к. $\exists 1 \in K^*: x=1x$
@@ -123,24 +134,29 @@ b)
 		\exists r_1 \in K^*: x=r_1 y\\
 		\exists r_2 \in K^*: y=r_2 z
 		\end{cases}
-		\Then x = \expl{r_1 r_2}{\in K^* \text{, т. к. }(r_1 r_2)^{-1} = r_2^{-1} r_1^{-1}} z \Then x \~ z$
+		\Then x = \ubrace{r_1 r_2}{\in K^* \text{, т. к. }(r_1 r_2)^{-1} = r_2^{-1} r_1^{-1}} z \Then x \~ z$
 	
 	\End{solution}
 	
-\begin{problem}[11]
+\begin{problem}[11 (2.5)]
+Если $a, b, k \in \Z$, $u\not \in \Q$, то $z= a+bu \in \Z[u]$ делится на $k$ тогда и только тогда, когда $a$ и $b$ делятся на $k$.
 \end{problem}
 \Begin{solution}
 \End{solution}
 
 \begin{problem}[12(2.9 $\When$)]
+$K$ — евклидово кольцо. Верно ли, что для $a \ne 0, b \in K^*$ выполнено равенство $N(ab) = N(a)$?
 \end{problem}
 \Begin{solution}
 $b \in K^* \Then N(a) \le N(ab) \le N(abb^{-1}) = N(a)$
 \End{solution}
 
 \begin{problem}[13 (3.2)]
+Для $u=i,\omega$ и простого целого числа $p \leq 40$ выясните, существует ли $z \in D$ с $N(z)=p$. Сформулируйте гипотезу о том, какие простые целые числа являются простыми в $D$. 
 \end{problem}
 \Begin{solution}
+
+Выпишем все варианты $a, b$  с нормой $\le 40$.
 
 | a | b | $\mathbb{Z}[i], N = a^2+b^2$ | $\mathbb{Z}[\omega], N = a^2-ab+b^2$ |
 |---|---|------------------------------|--------------------------------------|
@@ -159,13 +175,35 @@ $b \in K^* \Then N(a) \le N(ab) \le N(abb^{-1}) = N(a)$
 | 3 | 5 | 34                           | 19                                   |
 | 4 | 4 | 32                           | 16                                   |
 
+Выпишем все простые числа $\le 40$ и вычеркнем те, которые являются нормой. Берём оставшиеся.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llllll}
+\multicolumn{3}{c}{$\Z[i]$} & \multicolumn{3}{c}{$\Z[\omega]$} \\
+        & 2      & \x     & \y       & 2        &          \\
+\y      & 3      &        &          & 3        & \x       \\
+        & 5      & \x     & \y       & 5        &          \\
+\y      & 7      &        &          & 7        & \x       \\
+\y      & 11     &        & \y       & 11       &          \\
+        & 13     & \x     &          & 13       & \x       \\
+        & 17     & \x     & \y       & 17       &          \\
+\y      & 19     &        &          & 19       & \x       \\
+\y      & 23     &        & \y       & 23       &          \\
+        & 29     & \x     & \y       & 29       &          \\
+\y      & 31     &        &          & 31       & \x       \\
+        & 37     & \x     & \y       & 37       &         
+\end{tabular}
+\end{table}
+
+Гипотеза: у $\Z[i]$ $4k+3$, у $\Z[\omega]$ $3k+2$.
 \End{solution}
 
 \begin{problem}[14 (3.9)]
 \end{problem}
 \Begin{solution}
 
-a)	
+a) $0 \subset K, K \subset K$ --- идеалы. Они называются **тривиальными**.
 	* $\{0\}$:
 		1. Тривиальная группа по сложению: 
 			* Ассоциативность наследуется
@@ -180,7 +218,7 @@ a)
 			* $a^{-1} = -a \in K$
 		2. Замкнутость относительно умножения:
 			$\forall a \in K \forall b \in I=K \ ab \in I=K$ --- по свойству кольца
-b)
+b) $(a) = \{ax \mid x\in K\}$ --- **главный идеал** или **идеал, порождённый одним элементом**
 	1. Подгруппа по сложению: 
 		* $ax_1+ax_2=a(x_1+x_2)\in(a)$ --- замкнутость относительно сложения
 		* Ассоциативность наследуется
@@ -188,7 +226,7 @@ b)
 		* $ax+a(-x)=a(x-x)=a\cdot 0=0$
 	2. Замкнутость относительно умножения:
 		$\forall b \in K \forall ax \in (a) \ b\cdot ax = bx \cdot a \in (a)$
-c)
+c) $(a_1,\ldots,a_n) = \{a_1x_1+\ldots+a_nx_n \mid x_1,\ldots,x_n \in K\}$ --- **конечно-порождённый идеал**, то есть идеал, порождённый конечным количеством элементов.
 	1. Подгруппа по сложению: 
 		* $(a_1x_1+\dots+a_nx_n)+(a_1y_1+\dots+a_ny_n) = a_1(x_1+y_1)+\dots+a_n(x_n+y_n) \in I$ --- замкнутость относительно сложения
 		* Ассоциативность наследуется
@@ -202,15 +240,19 @@ c)
 \begin{problem}[15(3.11)]
 \end{problem}
 \Begin{solution}
+a) Докажите, что $(a) \subset (b)$ тогда и только тогда, когда $b \mid a$.
+b) Докажите, что $a \sim b$ тогда и только тогда, когда $(a)=(b)$.
 \End{solution}
 
 \begin{problem}[16(3.12)]
+Пусть $I,J \subset K$ --- идеалы. \textbf{Сумма} $I+J = \{x+y \mid x \in I,y \in J\}$ и \textbf{пересечение} $I \cap J$ идеалов являются идеалами. 
 \end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
 \begin{problem}[17(3.15)]
+Пусть $K \neq 0$. Докажите, что $K$ является полем тогда и только тогда, когда $K$ не содержит нетривиальных идеалов.
 \end{problem}
 \Begin{solution}
 
@@ -228,13 +270,15 @@ TODO
 \End{solution}
 
 \begin{problem}[18(4.1)]
+Верно ли, что при гомоморфизме колец $\varphi: K \to L$ 
+a) образ; b) прообраз идеала является идеалом?
 \end{problem}
 
 a) 
 	\Begin{solution}
 	Неверно. Контрпример: $\phi:\Z \to \Q, \phi(x)=x$ --- поэлементное вложение.
 	
-	$I=\Z$ в $\Z$ --- тривиальный идеал. Но $\phi(I)=\Z$ --- не идеал в $\Q$, ибо, например, $\expl{\frac{1}{2}}{\in \Q} \cdot \expl{1}{\in \Z} = \frac{1}{2} \not\in I$.
+	$I=\Z$ в $\Z$ --- тривиальный идеал. Но $\phi(I)=\Z$ --- не идеал в $\Q$, ибо, например, $\ubrace{\frac{1}{2}}{\in \Q} \cdot \ubrace{1}{\in \Z} = \frac{1}{2} \not\in I$.
 	\End{solution}
 b)	
 	\Begin{solution}
@@ -254,14 +298,14 @@ b)
 
 \begin{problem}[19(4.2)]
 \end{problem}
-a)
+a) Всегда ли факторкольцо коммутативного кольца является коммутативным кольцом?
 	\Begin{solution}
 	$(a+I)(b+I) = ab+aI+bI+II=ab+I=ba+I=ba+bI+aI+II=(b+I)(a+I)$
 	
 	TODO??
 	\End{solution}
 
-b)
+b) Имеется **канонический** гомоморфизм $\varphi: K \to K/I$, который переводит $a \mapsto a+I$.
 	\Begin{solution}
 	Проверим свойства гомоморфизма:
 	* $\phi(a)+\phi(b)=a+I+b+I= (a+b)+I=\phi(a+b)$
@@ -271,6 +315,7 @@ b)
 	\End{solution}
 
 \begin{problem}[20(4.5)]
+Пусть $K$ --- область целостности. Идеал $(x)$ является простым тогда и только тогда, когда $x$ прост.
 \end{problem}
 \Begin{solution}
 $(x)$ --- простой $\Bydef$ если $ab \in (x)$, то $\begin{sqcases} a \in (x) \\ b \in (x) \end{sqcases}$
@@ -281,6 +326,7 @@ $x$ --- простой $\Bydef$ если $ab \Divby x$, то $\begin{sqcases} a 
 \End{solution}
 
 \begin{problem}[21(4.6)]
+Пусть $K$ --- область целостности. Нетривиальный идеал $I$ является максимальным тогда и только тогда, когда $K/I$ поле.
 \end{problem}
 \Begin{solution}
 Знаем (№17): $\sfrac{K}{I}$ --- поле $\Iff$ в $\sfrac{K}{I}$ нет нетривиальных идеалов.
@@ -294,17 +340,35 @@ $x$ --- простой $\Bydef$ если $ab \Divby x$, то $\begin{sqcases} a 
 \End{solution}
 
 \begin{problem}[22(4.7)]
+Пусть $K$ --- область целостности. Нетривиальный идеал $I$ является простым тогда и только тогда, когда $K/I$ область целостности.
 \end{problem}
 \Begin{solution}
 
 * $\Then:$
 	Пусть I --- простой, но $\sfrac{K}{I}$ --- не область целостности. Тогда $\exists a, b \in K: (a+I)(b+I) = ab+I = 0+I = 0_{\sfrac{K}{I}}$. Но тогда должно быть $ab \in I$, т. е. идеал не простой. Противоречие.
 * $\When:$
-	Пусть I непростой. Тогда $\exists a, b: a, b \in I$, но $ab \not\in I$. Рассмотрим $0 \ne (a+I)(b+I) = ab + I \expl{=}{ab \in I} I =  0_{\sfrac{K}{I}}$.
+	Пусть I непростой. Тогда $\exists a, b: a, b \in I$, но $ab \not\in I$. Рассмотрим $0 \ne (a+I)(b+I) = ab + I \ubrace{=}{ab \in I} I =  0_{\sfrac{K}{I}}$.
 
 \End{solution}
 
-\begin{problem}[23]
+\begin{problem}[23(5.1, 5.2)]
+Пусть $K$ --- область целостности. Рассмотрим  множество пар $\tilde{K}=\{a,b\}$ элементов кольца $K$, где $b\neq 0$. На этом множестве введем отношение следующим образом: $\{a,b\} \sim \{c,d\}$, если $ad=bc$.
+
+a) Докажите, что $\{a,b\} \sim \{ac,bc\}$. 
+b) Докажите, что это отношение эквивалентности.
+
+Элемент множества классов эквивалентности $F = \Quot(K)$ будем записывать как $\frac{a}{b}$ или $ab^{-1}$. Введем операции сложения и умножения на $F = \Quot(K)$:
+
+$$\frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd},$$
+$$\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}.$$
+
+Докажите, что
+
+c) сложение и умножение корректно определено;
+d) $F$ является коммутативным кольцом;
+e) $F$ является полем;
+f) существует инъекция $K \to F$.
+
 \end{problem}
 \Begin{solution}
 
@@ -322,29 +386,42 @@ TODO
 \End{solution}
 
 \begin{problem}[24(6.1)]
+\textbf{Признак неприводимости Эйзенштейна}
+
+Пусть $f(x)$ --- многочлен с целыми коэффициентами и существует такое простое число $p$, что:
+
+1. старший коэффициент $f(x)$ не делится на $p$;
+2. все остальные коэффициенты $f(x)$ делятся на $p$;
+3. свободный член $f(x)$ не делится на $p^2$.
+
+Тогда многочлен $f(x)$ неприводим над полем рациональныx чисел.
 \end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
-\begin{problem}[25(6.2?)]
+\begin{problem}[25(6.2?????)]
+Многочлен $x^n - p$ ($p$ --- простое число) неприводим над $\Q$.
 \end{problem}
 \Begin{solution}
 По критерию Эйзенштейна: $1 \not\Divby p, -p \Divby p, -p \not\Divby p^2$, где p --- простое.
 \End{solution}
 
 \begin{problem}[26(6.3)]
+Характеристика поля --- простое число.
 \end{problem}
 \Begin{solution}
 Если k непростое, $k=m\cdot n$, то $m\cdot n = 0$, т. е. есть делители нуля --- противоречие с тем, что у нас поле.
 \End{solution}
 
 \begin{problem}[27(6.4)]
+Пусть $F \subset G$ --- поля. Верно ли, что $\mathrm{char}(F) = \mathrm{char}(G)$?
 \end{problem}
 \Begin{solution}
 \End{solution}
 
 \begin{problem}[28(6.5)]
+Любое конечное поле имеет положительную характеристику.
 \end{problem}
 \Begin{solution}
 Пусть F конечно, а $\Char F = 0$. Тогда $\ubrace{1+\dots+1}{k}$ для любого k будет давать элемент поля, не совпадающий с предыдущими (иначе $\Char$ была бы конечна).
@@ -353,6 +430,7 @@ TODO
 \End{solution}
 
 \begin{problem}[29(№6.7)]
+Нетривиальный гомоморфизм полей $\varphi: F \to L$ является инъекцией.
 \end{problem}
 $\phi: F \to L$ -- инъекция $\Iff \Ker \phi = \{0\}$.
 \Begin{solution}
@@ -374,10 +452,11 @@ $\Ker \phi$ --- идеал в F
 $\forall a \in F \forall x \in \Ker \phi \ \phi(ax)=\phi(a)\phi(x)=\phi(a) \cdot 0 = 0 \ Then ax \in \Ker \phi$
 \End{solution}
 
-В поле F идеал $I=\begin{cases} \{0\} \\ F \end{cases}$, т. е. $\Ker \phi = \begin{cases} \{0\}\\F --- \text{но в этом случае гомоморфизм тривиален, но у нас нетривиальный по условию} \end{cases}$
+В поле F идеал $I=\begin{cases} \{0\} \\ F \end{cases}$, т. е. $\Ker \phi = \begin{cases} \{0\} \\ F --- \text{но в этом случае гомоморфизм тривиален, но у нас нетривиальный по условию} \end{cases}$
 
 
 \begin{problem}[30(№6.8)]
+$K$ образует линейное пространство над $F$.
 \end{problem}
 \Begin{solution}
 Проверка свойств. Свойства линейного пространства следуют из аксиом поля.
@@ -407,6 +486,7 @@ TODO: почему так?
 \End{solution}
 
 \begin{problem}[33]
+Пусть $f(x)$ --- неприводимый многочлен степени $n$, и $K = \sfrac{F[x]}{(f(x))}$. Чему равна степень $[K : F]$ этого расширения?
 \end{problem}
 \Begin{solution}
 Обозначим смежный класс многочлена $g(x) \in F$ как $\overline{g}(x) \in K$. Рассмотрим $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$. Пусть они ЛЗ, т. е. $\exists \lambda_0, \lambda_1, \dots, \lambda_{n-1} \in F: \lambda_0\cdot\ol{1}+\lambda_1\cdot\ol{x}+\dots+\lambda_{n-1}\cdot\ol{x}^{n-1} = 0$. Тогда $g(x) = \lambda_0+\lambda_1x+\dots+\lambda_{n-1}x^{n-1} \in (f(x))$, а по неприводимости $f(x)$ имеем $g(x) = 0$, т. е. $\lambda_0 = \lambda_1 = \dots = \lambda_{n-1} = 0$, и данная ЛК тривиальна. Поэтому $\ol{1}, \ol{x}, \dots, \ol{x}^{n-1}$ ЛНЗ.
@@ -415,24 +495,37 @@ $\forall$ многочлена $h(x) \in F[x] \ \ol{h}(x)$ --- образ при
 \End{solution}
 
 \begin{problem}[36(9.1)]
+Для производной выполнены формулы $(f+g)'=f'+g'$ и $(fg)' = f'g+fg'$.
 \end{problem}
 \Begin{solution}
 TODO
 \End{solution}
 
-\begin{problem}[37]
+\begin{problem}[37 (9.2)]
+Многочлен $f$ не имеет кратных корней тогда и только тогда, когда $(f,f')=1$.
 \end{problem}
 \Begin{solution}
 
 \End{solution}
 
 \begin{problem}[38(9.6)]
+Докажите, что можно построить\\ 
+a) все точки с рациональными координатами;
+b) $\xi_n$, где $n=3,4,6$;
+c) $\xi_5$.
+
+Если мы построили точки $z,w$, то можно ли построить точки 
+d) $\overline{z},-z$? 
+e) $z+w$, $z-w$?
+f) $z\cdot w$, $\frac{z}{w}$ (при $w\neq 0$)?
+g) $\sqrt{z}$?
 \end{problem}
 \Begin{solution}
 
 \End{solution}
 
-\begin{problem}[39]
+\begin{problem}[39 (9.12а)]
+Докажите невозможность **удвоения куба**, то есть построение куба объёма $2$, имея куб объёма $1$ с помощью циркуля и линейки.
 \end{problem}
 \Begin{solution}
 
@@ -445,6 +538,35 @@ TODO
 \End{solution}
 
 \begin{problem}[41 (10.4)]
+\end{problem}
+\Begin{solution}
+
+\End{solution}
+
+\begin{problem}[42 (10.5)]
+\end{problem}
+\Begin{solution}
+
+\End{solution}
+
+\begin{problem}[43 (11.1)]
+a) Конечное поле характеристики $p$ состоит из $p^n$ элементов. 
+b) Поле $F$ является полем разложения многочлена $x^{p^n}-x$. 
+c) Cуществует единственное поле из $p^n$ элементов.
+\end{problem}
+\Begin{solution}
+
+\End{solution}
+
+\begin{problem}[44 (11.2)]
+Найдите все неприводимые многочлены (со стар. коэффициент $1$) степени $2$, $3$ над полем a) $F_2$, b) $F_3$.
+\end{problem}
+\Begin{solution}
+
+\End{solution}
+
+\begin{problem}[45 (11.3)]
+Постройте поле из a) $4$; b) $8$; c) $9$ элементов.
 \end{problem}
 \Begin{solution}
 

@@ -264,7 +264,32 @@ b) Докажите, что $a \sim b$ тогда и только тогда, к
 Пусть $I,J \subset K$ --- идеалы. \textbf{Сумма} $I+J = \{x+y \mid x \in I,y \in J\}$ и \textbf{пересечение} $I \cap J$ идеалов являются идеалами. 
 \end{problem}
 \Begin{solution}
-TODO
+
+a)
+	1.
+		* $(x_1+y_1)+(x_2+y_2) = \ubrace{(x_1+x_2)}{\in I}+\ubrace{(y_1+y_2)}{\in J} \in I+J$
+		* Ассоциативность следует.
+		* 0 --- нейтральный.
+		* $(x+y)+\ubrace{(-x-y)}{\in I+J} = (x-x)+(y-y)=0$ --- обратный
+	2. $\forall a \in K \Have a(x+y)=\ubrace{ax}{\in I}+\ubrace{ay}{\in J} \in I+J$
+
+b)
+	1.
+		* $x, y \in I \cap J \Then 
+			\begin{cases} x, y \in I \\ x, y \in J \end{cases} \Then
+			\begin{cases} x + y \in I \\ x + y \in J \end{cases} \Then
+			x+y \in I+J$
+		* Ассоциативность следует.
+		* 0 --- нейтральный
+		* $x \in I\cap J \Then
+			\begin{cases} x \in I \\ x\in J \end{cases} \Then
+			\begin{cases} x^{-1} \in I \\ x^{-1} \in J \end{cases} \Then
+			x^{-1} \in I+J$ --- обратный
+	2. $\forall a \in K\ \forall x \in I\cap J \Have 
+			\begin{cases} x\in I \\ x\in J \end{cases} \Then 
+			\begin{cases} ax\in I \\ ax\in J \end{cases} \Then
+			ax \in I \cap J$
+
 \End{solution}
 
 \begin{problem}[17(3.15)]
@@ -347,12 +372,19 @@ $x$ --- простой $\Bydef$ если $ab \Divby x$, то $\begin{sqcases} a 
 \Begin{solution}
 Знаем (№17): $\sfrac{K}{I}$ --- поле $\Iff$ в $\sfrac{K}{I}$ нет нетривиальных идеалов.
 
-* $\Then:$ 
-	Пусть $\sfrac{K}{I}$ --- поле, пусть $\exists I: i \subset J \subset K$ --- нетривиальный идеал. Подействуем на него каноническим гомоморфизмом $\phi: K \to \sfrac{K}{I}$. Тогда $\phi(I)$ --- идеал в $\sfrac{K}{I}$.
+
+Пусть $\sfrac{K}{I}$ --- поле, пусть $\exists I: I \subset J \subset K$ --- нетривиальный идеал. Подействуем на него каноническим гомоморфизмом $\phi: K \to \sfrac{K}{I}$. 
+
+**Лемма.** Пусть $f: K \to L$ --- гомоморфизм колец, $I \subset K, J \subset L$ --- идеалы. Тогда a) $f(I)$ --- идеал в $f (K)$, b) $f^{-1} (J)$ --- идеал в K.
+\begin{solution}
+a) Пусть $x \in f(I), y \in f(K)$. Тогда найдутся такие $x'$ и $y'$, где $x' \in I, x = f(x'), y' \in K, y = f(y')$.
+	Имеем: $xy = f(x')f(y') = f (x' y') \in F(I)$, так как $x' y' \in I$.
 	
-	TODO: ??
-* $\When:$
-	
+b) Пусть теперь $x \in f^{-1}(J), y \in K$. Тогда $f(xy) = f(x)f(y) \in J$, следовательно, $xy \in f^{-1}(J)$.
+\end{solution}
+
+Из Леммы следует, что в $\sfrac{K}{I}$ существует нетривиальный идеал $\Iff$, когда существует идеал в $K$, содержащий $I$.
+
 \End{solution}
 
 \begin{problem}[22(4.7)]
@@ -430,10 +462,11 @@ TODO
 Если k непростое, $k=m\cdot n$, то $m\cdot n = 0$, т. е. есть делители нуля --- противоречие с тем, что у нас поле.
 \End{solution}
 
-\begin{problem}[27(6.4)]
+\begin{problem}[27(6.4)(Lecture\_all.pdf №6.2(3)]
 Пусть $F \subset G$ --- поля. Верно ли, что $\mathrm{char}(F) = \mathrm{char}(G)$?
 \end{problem}
 \Begin{solution}
+Так как $\phi(1) = 1$, имеем $\phi(\ubrace{1+\dots+1}{m}) = \ubrace{1+\dots+1}{m}$. Т. к. $\Ker \phi = \{0\}$, то $\ubrace{1+\dots+1}{m} = 0$ в $K$ и $F$ одновременно. Следовательно, $\Char F = \Char K$.
 \End{solution}
 
 \begin{problem}[28(6.5)]
@@ -514,7 +547,14 @@ $\forall$ многочлена $h(x) \in F[x] \ \ol{h}(x)$ --- образ при
 Для производной выполнены формулы $(f+g)'=f'+g'$ и $(fg)' = f'g+fg'$.
 \end{problem}
 \Begin{solution}
-TODO
+Для $f(x) = a_nx^n+\dots+a_1x+a_0$ и $b(x) = b_nx^n+\dots+b_1x+b_0$:
+
+$(f+g)'= n(a_n+b_n)x^n+\dots+(a_2+b_2)x+(a_1+b_1) = (na_nx^n+a_2x+a_1)+(nb_nx^n+\dots+b_2x+b_1) = f'+g'$
+
+Рассмотрим $f(x)-f(y) = \sum\limits_{k=1}{n} a_k(x^k-y^k) = (x-y)\sum\limits_{k=1}{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1}) = (x-y) \Phi(x, y)$, где $\Phi(x, y) = \sum\limits_{k=1}{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1})$. Заметим, что $\Phi(x, x) = f'(x)$.
+
+Тогда имеем для $\phi = fg$: $\phi(x)-phi(y) = f(x)g(x)-f(y)g(y) = f(x) (g(x)-g(y))+g(y)(f(x)-f(y)) = (x-y)[f(x)G(x,y)+g(y)\Phi(x,y)]$.
+Отсюда $\phi' = f(x)G(x,x)+g(x)\Phi(x,x)=f(x)g'(x)+g(x)f'(x)$.
 \End{solution}
 
 \begin{problem}[37 (9.2)]

@@ -73,6 +73,8 @@ $ac=bc \Iff (a-b)c=0 \Then$ т. к. нет делителей нуля и $c \ne
 \end{problem}
 \Begin{solution}
 В области целостности нет делителей нуля, а если в конечном коммутативном кольце элемент --- не делитель нуля, то он обратим (№6). Т. е. все элементы обратимы.
+
+Имеем $\ge 2$ элементов по условию.
 \End{solution}
 
 \begin{problem}[8]
@@ -292,7 +294,7 @@ a)
 	* $\Then:$ $(a) \subset (b) \Then a \in (b) \Then a=cb \Then a|b$
 b) 
 	* $\Then:$ $a \~ b \Then \begin{cases} a|b \\ b|a \end{cases} \Then (a) \subset (b) \subset (a) \Then (a) = (b)$
-	* $\When:$ $(a) = (b) \Then \begin{cases} a|b \\ b|a \end{cases} \Then a \~ a$
+	* $\When:$ $(a) = (b) \Then \begin{cases} a|b \\ b|a \end{cases} \Then a \~ b$
 
 \End{solution}
 
@@ -573,7 +575,7 @@ $\phi: F \to L$ -- инъекция $\Iff \Ker \phi = \{0\}$.
 	Имеем $\phi(0)=0$ по свойству гомоморфизма, тогда по инъективности $\forall a \ne 0 \phi(a) \ne \phi(0)=0$, т. е. $\Ker \phi = \{0\}$.
 
 * $\When:$
-	$\Ker \phi = \{0\} \Then$
+	$\Ker \phi = \{0\} \Then$ TODO
 
 \End{solution}
 

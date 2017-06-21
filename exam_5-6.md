@@ -1,10 +1,3 @@
-\begin{problem}[4 (2.7) [Каргальцев]]
-Простой элемент области целостности является неразложимым.
-\end{problem} 
-\Begin{solution}
-Пусть $p$ --- простой и $p = xy \Then x | p \land y | p$ . Из определения простоты $p | x \lor p | y$. Но тогда или $x | p \land p | x$, или $y | p \land p | y$. Тогда $p \sim y \lor p \sim x \Then y \in K^* \lor x \in K^*$, то есть $p$ --- неразложимый.
-\End{solution}
-
 \begin{problem}[1 (1.4) [Каргальцев]]
 Для любого числа $u \in \C$ определим множество $\Z[u] = \cup_{n = 0}^{\infty} \{a_0 + a_1u + \ldots + a_nu^n | a_0, a_1, \ldots, a_n \in \Z\}$.
 \end{problem} 
@@ -31,20 +24,11 @@ $\When$
 
 \End{solution}
 
-
-\begin{problem}[25 [Каргальцев]]
-Докажите, что в кольце главных идеалов любая возрастающая цепочка идеалов
-
-$$ (a_1) \subset (a_2) \subset \ldots \subset (a_n) \subset \ldots $$
-
-стабилизируется, то есть найдется такое $k$, то $(a_k) = (a_{k + 1}) = \ldots$
+\begin{problem}[4 (2.7) [Каргальцев]]
+Простой элемент области целостности является неразложимым.
 \end{problem} 
 \Begin{solution}
-Поскольку $(a_i) \subset (a_{i + 1}) \Then a_{i + 1} | a_i$.
-
-Возьмем $I = \cup_{k = 1}^{\infty} (a_k)$. покажем, что $I$ -- идеал. Пусть $a \in I, b \in I \Then \exists k_1, k_2: a \in (a_{k_1}), b \in (a_{k_2})$. Тогда положим $k = max(k_1, k_2)$. $a, b \in (a_k) \Then (a + b) \in (a_k) ((a_k) \textup{--- идеал}) \Then (a + b) \in I$. Анологично $\forall x \in K xa \in (a_k) \Then xa \in I$.
-
-Поскольку $K$ --- КГИ, то существует $x: I = (x)$. $x \in I \Then \exists k: x \in (a_k)$. Но $a_k \in (x)$. Тогда $x | a_k \land a_k | x \Then x \sim a_k$. Но в силу вложенности это верно и для всех $j > k$, то есть $\forall j \geqslant k a_j \sim a_k \Then (a_j) = (a_k)$. То есть цепочка действительно стабилизируется.
+Пусть $p$ --- простой и $p = xy \Then x | p \land y | p$ . Из определения простоты $p | x \lor p | y$. Но тогда или $x | p \land p | x$, или $y | p \land p | y$. Тогда $p \sim y \lor p \sim x \Then y \in K^* \lor x \in K^*$, то есть $p$ --- неразложимый.
 \End{solution}
 
 \begin{problem}[6 (часть 2.9) [Каргальцев]]
@@ -127,4 +111,19 @@ $z \overline{z} = N(z) = p \cdot p$. В силу единственности р
 Неразложимые элементы, не описанные в предыдущих задачах могут иметь норму или 2, или 4. Норму 4 имеет только $2$ и ассоциированные с ней, но $2 = (1 + i)(1 - i)$.
 
 С другой стороны, $N(\pm 1 \pm i) = 2$, то есть силу пункта в) предыдущей задачи $\pm 1 \pm i$ неразложимы.
+\End{solution}
+
+\begin{problem}[25 [Каргальцев]]
+Докажите, что в кольце главных идеалов любая возрастающая цепочка идеалов
+
+$$ (a_1) \subset (a_2) \subset \ldots \subset (a_n) \subset \ldots $$
+
+стабилизируется, то есть найдется такое $k$, то $(a_k) = (a_{k + 1}) = \ldots$
+\end{problem} 
+\Begin{solution}
+Поскольку $(a_i) \subset (a_{i + 1}) \Then a_{i + 1} | a_i$.
+
+Возьмем $I = \cup_{k = 1}^{\infty} (a_k)$. покажем, что $I$ -- идеал. Пусть $a \in I, b \in I \Then \exists k_1, k_2: a \in (a_{k_1}), b \in (a_{k_2})$. Тогда положим $k = max(k_1, k_2)$. $a, b \in (a_k) \Then (a + b) \in (a_k) ((a_k) \textup{--- идеал}) \Then (a + b) \in I$. Анологично $\forall x \in K xa \in (a_k) \Then xa \in I$.
+
+Поскольку $K$ --- КГИ, то существует $x: I = (x)$. $x \in I \Then \exists k: x \in (a_k)$. Но $a_k \in (x)$. Тогда $x | a_k \land a_k | x \Then x \sim a_k$. Но в силу вложенности это верно и для всех $j > k$, то есть $\forall j \geqslant k a_j \sim a_k \Then (a_j) = (a_k)$. То есть цепочка действительно стабилизируется.
 \End{solution}

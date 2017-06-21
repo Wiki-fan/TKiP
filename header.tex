@@ -37,6 +37,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \renewcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
 
 \renewcommand{\~}{\sim}
 \renewcommand{\phi}{\varphi}
@@ -106,3 +107,7 @@ headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
+
+% Strikeout
+\usepackage[normalem]{ulem}
+\newcommand{\s}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}

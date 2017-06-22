@@ -274,7 +274,7 @@ a & b & \(\mathbb{Z}[i], N = a^2+b^2\) & \(\mathbb{Z}[\omega], N = a^2-ab+b^2\)\
 \bottomrule
 \end{longtable}
 
-Пользуемся утверждением с лекции: Пусть p -- простое целое, \(\forall z \in D: N(z)\ne p \Then\) p неразложим в D.
+Пользуемся №3.1б (№9 exam\_5-6): Пусть $p$ --- простое целое, \(\forall z \in D: N(z)\ne p \Then\) $p$ неразложим в $D$.
 
 Выпишем все простые числа \(\le 40\) и вычеркнем те, которые являются нормой. Берём оставшиеся.
 
@@ -298,8 +298,14 @@ a & b & \(\mathbb{Z}[i], N = a^2+b^2\) & \(\mathbb{Z}[\omega], N = a^2-ab+b^2\)\
 \end{table}
 
 Гипотеза:
-* у \(\Z[i]\) \(4k+3\)
-* у \(\Z[\omega]\) \(3k+2\) или TODO.
+\begin{itemize}
+\i у \(\Z[i]\) \(4k+3\)
+\i у \(\Z[\omega]\) --- одно из следующих взаимоисключающих условий:
+    \begin{itemize}
+    \i $z$ является произведением обратимого элемента (например, 1) на натуральное простое вида \(3k+2\),
+    \i $N(Z)^2 = a^2 - ab + b^2$ является натуральным простым, сравнимым с 0 или 1 по модулю 3.
+	\end{itemize}
+\end{itemize}
 \end{solution}
 
 \begin{problem}[14 (3.9)]
@@ -638,7 +644,7 @@ b) (можно сослаться на №18(б)) Пусть теперь $x \in
   Пусть I --- простой, но \(\sfrac{K}{I}\) --- не область целостности. Тогда \(\exists a, b \in K\setminus I: (a+I)(b+I) = ab+I = 0+I = 0_{\sfrac{K}{I}}\). Но тогда должно быть \(ab \in I\), т. е. идеал не простой. Противоречие.
 \i
   \(\When:\)
-  Пусть I непростой. Тогда \(\exists a, b: a, b \in I\), но \(ab \not\in I\). Рассмотрим \(0 \ne (a+I)(b+I) = ab + I \ubrace{=}{ab \in I} I = 0_{\sfrac{K}{I}}\).
+  Пусть I непростой. Тогда \(\exists a, b: ab \in I\), но \(a, b \not\in I\). Рассмотрим \((a+I)(b+I) = ab + I \ubrace{\ne}{ab \not\in I} I = 0_{\sfrac{K}{I}}\), т. е. $K$ --- область целостности.
 \end{itemize}
 
 \end{solution}
@@ -720,7 +726,7 @@ f) существует инъекция $K \to F$.
     \i
       Для \(\frac{a}{b}\) обратный по сложению \(\frac{-a}{b}\): \(\frac{a}{b}+\frac{-a}{b} = \frac{a-a}{b} = \frac{0}{b}\)
     \i
-      \(\frac{a}{b} (\frac{c}{d} + \frac{e}{f}) = \frac{a}{b} \cdot \frac{cf+de}{df} = \frac{acf+ade}{bdf} = \frac{acbf+aebd}{bdf} = \frac{ac}{bd}+\frac{ae}{bf} = \frac{a}{b}\cdot \frac{c}{d}+\frac{a}{b} \cdot \frac{e}{f}\)
+      \(\frac{a}{b} (\frac{c}{d} + \frac{e}{f}) = \frac{a}{b} \cdot \frac{cf+de}{df} = \frac{acf+ade}{bdf} = \frac{ac}{bd}+\frac{ae}{bf} = \frac{a}{b}\cdot \frac{c}{d}+\frac{a}{b} \cdot \frac{e}{f}\)
     \end{itemize}
   \i
     Оно ассоциативно по умножению: \(\frac{a}{b} (\frac{c}{d} \cdot \frac{e}{f}) = \frac{a}{b} (\frac{ce}{df} ) = \frac{ace}{bdf} = (\frac{ac}{bd}) \frac{e}{f} = (\frac{a}{b} \cdot \frac{c}{d}) \cdot \frac{e}{f}\)
@@ -740,7 +746,11 @@ f) существует инъекция $K \to F$.
 \i
   Возьмём \(\phi: K \to F, \phi(a) = \frac{a}{1}\).
 
-  Это гомоморфизм: \(\frac{ab}{1} = \phi(ab) = \phi(a)\phi(b) = \frac{a}{1}\frac{b}{1} = \frac{a\cdot 1+1 \cdot b}{1\cdot 1} = \frac{ab}{1}\).
+  Это гомоморфизм: 
+  $\begin{cases} 
+    \frac{ab}{1} = \phi(ab) = \phi(a)\phi(b) = \frac{a}{1}\frac{b}{1} = \frac{a\cdot b}{1\cdot 1} = \frac{ab}{1}\\
+    \frac{a+b}{1} = \phi(a+b) = \phi(a)+\phi(b) = \frac{a}{1}+\frac{b}{1} = \frac{a\cdot 1+1 \cdot b}{1\cdot 1} = \frac{a+b}{1}
+  \end{cases}$
 
   Это инъекция: \(\forall a \ne b \in K \Have \phi(a) = \frac{a}{1} \ne \frac{b}{1} = \phi(b)\), ибо \(\frac{a}{1} - \frac{b}{1} = \frac{a-b}{1} \ne 0_F\).
 \end{enumerate}
@@ -1188,7 +1198,9 @@ c) Cуществует единственное поле из $p^n$ элемен
 \end{problem}
 
 \begin{solution}
-Выписываем все возможные многочлены и вычёркиваем те, которые разложимы.
+Выписываем все возможные многочлены и вычёркиваем те, которые разложимы. Если мы вычеркнули \it{все} разложимые (а мы умеем это делать, см. пункт а), то остались только неразложимые. Чтобы понять, что мы ничего не пропустили, проверяем оставшиеся на неразложимость при помощи признака Эйзенштейна, не забывая, что можно делать замену переменных. Примеры того, как это происходит, можно увидеть в №34.
+
+\bf{Зам.} Автор не проводил подобную проверку.
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi})}

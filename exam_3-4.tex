@@ -201,7 +201,7 @@
 \end{enumerate}
 
 \begin{problem}[11 (2.5)]
-Если $a, b, k \in \Z$, $u\not \in \Q$, то $z= a+bu \in \Z[u]$ делится на $k$ тогда и только тогда, когда $a$ и $b$ делятся на $k$.
+Если $k \in \Z$, то $z= a+bu \in D$ делится на $k$ тогда и только тогда, когда $a$ и $b$ делятся на $k$.
 \end{problem}
 
 \begin{solution}
@@ -1037,8 +1037,8 @@ $K$ образует линейное пространство над $F$.
 \begin{itemize}
 \i \((f+g)'= n(a_n+b_n)x^{n-1}+\dots+(a_2+b_2)x+(a_1+b_1) = (na_nx^{n-1}+a_2x+a_1)+(nb_nx^{n-1}+\dots+b_2x+b_1) = f'+g'\)
 
-\i Рассмотрим \(f(x)-f(y) = \sum\limits_{k=1}{n} a_k(x^k-y^k) = (x-y)\sum\limits_{k=1}{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1}) = (x-y) \Phi(x, y)\), где \(\Phi(x, y) = \sum\limits_{k=1}{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1})\). Заметим, что \(\Phi(x, x) = f'(x)\).
-	Тогда имеем для \(\phi = fg\): \(\phi(x)-phi(y) = f(x)g(x)-f(y)g(y) = f(x) (g(x)-g(y))+g(y)(f(x)-f(y)) = (x-y)[f(x)G(x,y)+g(y)\Phi(x,y)]\).
+\i Рассмотрим \(f(x)-f(y) = \sum\limits_{k=1}^{n} a_k(x^k-y^k) = (x-y)\sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1}) = (x-y) \Phi(x, y)\), где \(\Phi(x, y) = \sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1})\). Заметим, что \(\Phi(x, x) = f'(x)\).
+	Тогда имеем для \(\phi = fg\): \(\phi(x)-\phi(y) = f(x)g(x)-f(y)g(y) = f(x) (g(x)-g(y))+g(y)(f(x)-f(y)) = (x-y)[f(x)G(x,y)+g(y)\Phi(x,y)]\).
 	Отсюда \(\phi' = f(x)G(x,x)+g(x)\Phi(x,x)=f(x)g'(x)+g(x)f'(x)\).
 \end{itemize}
 \end{solution}

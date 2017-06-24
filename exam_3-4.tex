@@ -112,7 +112,7 @@
 \i
   \(\exists 1 \in K^*\) (единица из $K$ будет единицей из $K^*$: она лежит в $K^*$, т. к. $\exists 1^{-1} = 1$, ибо $1\cdot 1 = 1$, и выполняется свойство единицы $a1=1a=a$).
 \i
-  \((b^{-1}a^{-1})(ab) = (ab)(b^{-1}a^{-1})=1 \Then (ab)^{-1} = b^{-1} a^{-1} \in K^*\) --- обратимость.
+  \((b^{-1}a^{-1})(ab) = (ab)(b^{-1}a^{-1})=1 \Then (ab)^{-1} = b^{-1} a^{-1} \in K^*\) --- замкнутость относительно взятия обратного.
 \i
   \(\forall a, b \in K^* \Have ab \in K^*,\) т. к. $\exists (ab)^{-1} = b^{-1}a^{-1}$.
 \end{enumerate}
@@ -527,7 +527,7 @@ b) Докажите, что $a \sim b$ тогда и только тогда, к
 
 \begin{problem}[18(4.1)]
 Верно ли, что при гомоморфизме колец $\varphi: K \to L$ 
-a) образ идеала $I \subset K$ является идеалом в $L$; b) прообраз идеала $J \subset L$ является идеалом в $K$?
+a) образ идеала $I \subset K$ является идеалом в $L$; b) образ $I \subset K$ является идеалом в $\phi(K)$; c) прообраз идеала $J \subset L$ является идеалом в $K$?
 \end{problem}
 \begin{solution}
 \begin{enumerate}
@@ -536,14 +536,18 @@ a) образ идеала $I \subset K$ является идеалом в $L$;
   Неверно. Контрпример: \(\phi:\Z \to \Q, \phi(x)=x\) --- поэлементное вложение.
 
   \(I=\Z\) в \(\Z\) --- тривиальный идеал. Но \(\phi(I)=\Z\) --- не идеал в \(\Q\), ибо, например, \(\ubrace{\frac{1}{2}}{\in \Q} \cdot \ubrace{1}{\in \Z} = \frac{1}{2} \not\in I\).
+  
+\i Пусть $x \in f(I), y \in f(K)$. Тогда найдутся такие $x'$ и $y'$, где $x' \in I, x = f(x'), y' \in K, y = f(y')$.
+    Имеем: $xy = f(x')f(y') = f (x' y') \in F(I)$, так как $x' y' \in I$.
+    
 \i
   Верно. Пусть \(J\) --- идеал в L. \(\phi^{-1}(J) = \{a \in K : \phi(a) \in J\}\).
 
   \(\forall a, b \in \phi^{-1}(J): 
 	\begin{cases} 
 		a+b \in \phi^{-1}(J), \text{т. к. } \phi(a+b) = \phi(a)+\phi(b) \in J \\
-		\exists 1 \in \phi^{-1}(J), \text{т. к. } \phi(1)=1 \text{ по свойству гомоморфизма}\\
-		\exists a^{-1} \in \phi^{-1}(J), \text{т. к. }\phi(a^{-1}) = (\phi(a))^{-1} \in J 
+		\exists 0 \in \phi^{-1}(J), \text{т. к. } \phi(0)=0 \text{ по свойству гомоморфизма}\\
+		\exists -a \in \phi^{-1}(J), \text{т. к. }\phi(-a) = -\phi(a) \in J 
 	\end{cases}\)
 
   \(\forall x \in K,\ a \in \phi^{-1}(J) \Have \phi(ax)=\phi(a)\phi(x) \in J\).
@@ -623,13 +627,7 @@ a) образ идеала $I \subset K$ является идеалом в $L$;
 
 \bf{Лемма.} Пусть \(f: K \to L\) --- гомоморфизм колец, \(I \subset K, J \subset L\) --- идеалы. Тогда a) \(f(I)\) --- идеал в \(f (K)\), b) \(f^{-1} (J)\) --- идеал в K.
 
-\begin{solution}
-a) Пусть $x \in f(I), y \in f(K)$. Тогда найдутся такие $x'$ и $y'$, где $x' \in I, x = f(x'), y' \in K, y = f(y')$.
-    Имеем: $xy = f(x')f(y') = f (x' y') \in F(I)$, так как $x' y' \in I$.
-    
-b) (можно сослаться на №18(б)) Пусть теперь $x \in f^{-1}(J), y \in K$. Тогда $f(xy) = f(x)f(y) \in J$, следовательно, $xy \in f^{-1}(J)$.
-\end{solution}
-
+Используем №3-4.18.
 % Из Леммы следует, что в \(\sfrac{K}{I}\) существует нетривиальный идеал \(\Iff\) существует идеал в \(K\), содержащий \(I\):
 \begin{itemize}
 \i $\When:$ Пусть $\sfrac{K}{I}$ --- поле, но идеал $I$ не максимальный. Тогда $\exists$ нетривиальный идеал $J \subset K: I \subset J$.
@@ -1077,14 +1075,27 @@ $K \subset L\Then \Quot K$ вложено в $\Quot L$ как множество
 \end{problem}
 
 \begin{solution}
-Для \(f(x) = a_nx^n+\dots+a_1x+a_0\) и \(b(x) = b_nx^n+\dots+b_1x+b_0\):
+Для \(f(x) = a_nx^n+\dots+a_1x+a_0\) и \(g(x) = b_nx^n+\dots+b_1x+b_0\):
 
 \begin{itemize}
 \i \((f+g)'= n(a_n+b_n)x^{n-1}+\dots+(a_2+b_2)x+(a_1+b_1) = (na_nx^{n-1}+a_2x+a_1)+(nb_nx^{n-1}+\dots+b_2x+b_1) = f'+g'\)
 
-\i Рассмотрим \(f(x)-f(y) = \sum\limits_{k=1}^{n} a_k(x^k-y^k) = (x-y)\sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1}) = (x-y) \Phi(x, y)\), где \(\Phi(x, y) = \sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1})\). Заметим, что \(\Phi(x, x) = f'(x)\).
-	Тогда имеем для \(\phi = fg\): \(\phi(x)-\phi(y) = f(x)g(x)-f(y)g(y) = f(x) (g(x)-g(y))+g(y)(f(x)-f(y)) = (x-y)[f(x)G(x,y)+g(y)\Phi(x,y)]\).
-	Отсюда \(\phi' = f(x)G(x,x)+g(x)\Phi(x,x)=f(x)g'(x)+g(x)f'(x)\).
+\i \bf{Лемма.} $(\alpha f)' = \alpha f'$.
+	\begin{solution}
+		$(\alpha f)' = (\alpha a_nx^n+\dots+\alpha a_1 x + \alpha a_0)' = \alpha a_n n x^{n-1}+\dots+\alpha a_1 = \alpha(a_n n x^{n-1}+\dots+ a_1) = \alpha f'$
+	\end{solution}
+	
+	Если $(fg)' = f'g+fg'$ верно для $f=f_1$ и $f=f_2$, то для $f=\alpha f_1 + \beta f_2$:
+
+	$((\alpha f_1 + \beta f_2)g)' = \alpha(f_1g)'+\beta(f_2g)' = \alpha f_1'g+\beta f_2'g+\alpha f_1g'+\beta f_2g' = (\alpha f_1 + \beta f_2)'g+(\alpha f_1 + \beta f_2)g'$. Для $g$ симметрично. Значит, достаточно проверить формулу для $f = x^m$ и $g = x^k$.
+	
+	$(fg)' = (x^{m+k})' = (m+k)x^{m+k-1}$
+	
+	$f'g+fg' = mx^{m+k-1}+kx^{m+k-1} = (m+k)x^{m+k-1}$
+	
+%Рассмотрим \(f(x)-f(y) = \sum\limits_{k=1}^{n} a_k(x^k-y^k) = (x-y)\sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1}) = (x-y) \Phi(x, y)\), где \(\Phi(x, y) = \sum\limits_{k=1}^{n} a_k(x^{k-1}+x^{k-2}y+\dots+y^{k-1})\). Заметим, что \(\Phi(x, x) = f'(x)\).
+	%Тогда имеем для \(\phi = fg\): \(\phi(x)-\phi(y) = f(x)g(x)-f(y)g(y) = f(x) (g(x)-g(y))+g(y)(f(x)-f(y)) = (x-y)[f(x)G(x,y)+g(y)\Phi(x,y)]\).
+	%Отсюда \(\phi' = f(x)G(x,x)+g(x)\Phi(x,x)=f(x)g'(x)+g(x)f'(x)\).
 \end{itemize}
 \end{solution}
 

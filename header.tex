@@ -61,14 +61,20 @@
 \renewcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}
 
+% Short names
 \renewcommand{\~}{\sim}
 \renewcommand{\phi}{\varphi}
-\newcommand{\ol}{\overline}
 \newcommand{\Have}{\hookrightarrow}
 \newcommand{\isom}{\cong}
 \renewcommand{\ge}{\geqslant}
 \renewcommand{\le}{\leqslant}
 \providecommand{\abs}[1]{\lvert#1\rvert}
+\renewcommand{\bf}{\textbf}
+\renewcommand{\it}{\textit}
+\renewcommand{\i}{\item}
+\newcommand{\ul}{\itemize}
+\renewcommand{\bar}{\overline}
+\newcommand{\ol}{\enumerate}
 
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}
@@ -80,11 +86,6 @@
 \usepackage{xspace}
 \newcommand{\lgq}{\guillemotleft\nobreak\ignorespaces}
 \newcommand{\rgq}{\guillemotright\xspace}
-
-% Short names
-\renewcommand{\bf}{\textbf}
-\renewcommand{\it}{\textit}
-\renewcommand{\i}{\item}
 
 % Consider changing to sfrac
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
@@ -136,6 +137,10 @@ headformat={\makebox[0pt][r]{\NAME\ }\setbox0\hbox{\ }\hspace{-\the\wd0}\NOTE},]
 \declaretheorem[style=definitionstyle,numbered=yes,name=Опр.]{defn}
 
 \usepackage{enumitem}
+\AddEnumerateCounter{\Asbuk}{\@Asbuk}{\CYRM}
+\AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
+%\renewcommand{\theenumi}{(\Asbuk{enumi})}
+%\renewcommand{\labelenumi}{\Asbuk{enumi})}
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
 
